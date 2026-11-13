@@ -1,0 +1,107 @@
+.appShell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.topbar {
+  min-height: 76px;
+  padding: 0 clamp(22px, 6vw, 88px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: rgba(10, 14, 29, 0.76);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brandMark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #bba8ff, #72d6ec);
+  color: #11142a;
+  box-shadow: 0 0 24px #9d8aff40;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brandName {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -1.1px;
+}
+
+.brandName > span {
+  color: #8bdcf0;
+}
+
+.topbarMeta,
+.systemStatus {
+  display: flex;
+  align-items: center;
+}
+
+.topbarMeta {
+  gap: 28px;
+}
+
+.topbarLabel {
+  color: #8993b1;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.45px;
+}
+
+.systemStatus {
+  gap: 8px;
+  color: #a5b2ca;
+  font-size: 12px;
+}
+
+.systemStatus > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6ee7c2;
+  box-shadow: 0 0 0 3px #6ee7c220, 0 0 12px #6ee7c280;
+}
+
+.appMain {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 64px 0 88px;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    min-height: 66px;
+    padding: 0 20px;
+  }
+
+  .topbarMeta {
+    gap: 0;
+  }
+
+  .topbarLabel {
+    display: none;
+  }
+
+  .appMain {
+    width: min(100% - 32px, 1120px);
+    padding: 40px 0 60px;
+  }
+}

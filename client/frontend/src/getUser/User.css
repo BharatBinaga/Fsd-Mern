@@ -1,0 +1,852 @@
+.directoryPage {
+  animation: pageEnter 420ms ease both;
+}
+
+.pageIntro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 38px;
+}
+
+.eyebrow,
+.overviewLabel {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.55px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 18px;
+}
+
+.eyebrow > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: #a6c76b;
+  transform: rotate(45deg);
+}
+
+.pageIntro h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 400;
+  letter-spacing: -2.8px;
+  line-height: 1.08;
+}
+
+.pageIntro h1 > span {
+  color: #8c9383;
+  font-style: italic;
+}
+
+.pageDescription {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.primaryButton {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 19px;
+  border: 1px solid var(--accent-dark);
+  border-radius: 9px;
+  background: var(--accent-dark);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+  background: #394b27;
+}
+
+.primaryButton > span {
+  color: var(--accent);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.overviewStrip {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+  padding: 19px 25px;
+  border: 1px solid #e8e9e2;
+  border-radius: 14px;
+  background: #eeefe8;
+}
+
+.overviewItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.overviewIcon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff;
+  color: #788e4e;
+  font-size: 19px;
+}
+
+.syncIcon {
+  color: #7a8270;
+  font-size: 23px;
+}
+
+.overviewItem > div {
+  display: grid;
+  gap: 5px;
+}
+
+.overviewLabel {
+  font-size: 9px;
+  letter-spacing: 1.1px;
+}
+
+.overviewItem strong {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.overviewItem strong > span {
+  color: #74786f;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.overviewDivider {
+  width: 1px;
+  height: 42px;
+  background: #dfe1d8;
+}
+
+.overviewNote {
+  margin-left: auto;
+  color: #7a7f74;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.directoryCard {
+  overflow: hidden;
+  border: 1px solid #e9eae5;
+  border-radius: var(--radius-card);
+  background: var(--paper);
+  box-shadow: 0 12px 38px #34392b08, 0 2px 6px #34392b05;
+}
+
+.directoryToolbar {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 23px 27px;
+}
+
+.directoryToolbar h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -0.45px;
+}
+
+.directoryToolbar p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.directoryControls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.searchBox {
+  width: 225px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 11px;
+  border: 1px solid #e7e8e2;
+  border-radius: 8px;
+  background: #fbfbf9;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.searchBox:focus-within {
+  border-color: #a9bd84;
+  box-shadow: 0 0 0 3px #a9bd8426;
+}
+
+.searchIcon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  border: 1.5px solid #888d81;
+  border-radius: 50%;
+}
+
+.searchIcon::after {
+  position: absolute;
+  right: -4px;
+  bottom: -2px;
+  width: 6px;
+  height: 1.5px;
+  background: #888d81;
+  content: "";
+  transform: rotate(47deg);
+}
+
+.searchBox input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.searchBox input::placeholder {
+  color: #a0a39b;
+}
+
+.searchBox input:focus-visible {
+  outline: none;
+}
+
+.clearSearch {
+  padding: 0 2px;
+  border: 0;
+  background: transparent;
+  color: #777b72;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.refreshButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e7e8e2;
+  border-radius: 8px;
+  background: #fff;
+  color: #646a5c;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 150ms ease, transform 250ms ease;
+}
+
+.refreshButton:hover:not(:disabled) {
+  background: #f4f6ef;
+  transform: rotate(35deg);
+}
+
+.refreshButton:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.directoryAlert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 27px 18px;
+  padding: 12px 14px;
+  border: 1px solid #f0d7c8;
+  border-radius: 9px;
+  background: #fff8f3;
+  color: #80543c;
+  font-size: 12px;
+}
+
+.directoryAlert button {
+  padding: 5px 9px;
+  border: 0;
+  border-radius: 6px;
+  background: #f4e3d8;
+  color: #67442f;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.peopleTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.peopleTable thead {
+  background: #fafaf8;
+}
+
+.peopleTable th {
+  height: 42px;
+  padding: 0 24px;
+  border-top: 1px solid #f0f0ec;
+  border-bottom: 1px solid #eeefea;
+  color: #93968e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+}
+
+.peopleTable td {
+  height: 76px;
+  padding: 10px 24px;
+  border-bottom: 1px solid #f0f0ec;
+  color: #60655c;
+  font-size: 12px;
+}
+
+.peopleTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.peopleTable tbody tr:not(:has(.tableMessage)):hover {
+  background: #fcfcf9;
+}
+
+.personCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.personAvatar {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #e5e9d8;
+  border-radius: 12px;
+  background: #f0f3e7;
+  color: #65744c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.personName {
+  color: #292d26;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.emailCell,
+.locationCell {
+  color: #6f746a !important;
+}
+
+.contactHeading,
+.contactCell {
+  text-align: right;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #626d50;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  color: #34441f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contactLink span {
+  font-size: 14px;
+}
+
+.actionCell {
+  text-align: right;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.actionButton {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 160ms ease, opacity 160ms ease, border-color 160ms ease;
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+}
+
+.editButton {
+  border-color: #7c91d8;
+  background: rgba(124, 145, 216, 0.12);
+  color: #dfe8ff;
+}
+
+.deleteButton {
+  border-color: #d08a96;
+  background: rgba(208, 138, 150, 0.12);
+  color: #ffdfe5;
+  cursor: pointer;
+}
+
+.tableMessage {
+  height: 205px !important;
+  color: #85897f !important;
+  text-align: center !important;
+}
+
+.emptyTitle,
+.emptyDescription {
+  display: block;
+}
+
+.emptyTitle {
+  margin-bottom: 7px;
+  color: #353a31;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+}
+
+.emptyDescription {
+  color: #85897f;
+}
+
+.emptyAction {
+  display: inline-block;
+  margin-top: 15px;
+  color: #596a3e;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.emptyAction:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.directoryFooter {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 25px;
+  border-top: 1px solid #f0f0ec;
+  color: #85897f;
+  font-size: 10px;
+}
+
+.directoryFooter strong {
+  color: #454a40;
+  font-weight: 600;
+}
+
+.liveIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #777e6d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.liveIndicator > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8baa58;
+}
+
+.pageFootnote {
+  margin: 23px 0 0;
+  color: #a0a399;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.pageIntro h1 > span {
+  color: #a99bea;
+}
+
+.eyebrow,
+.overviewLabel {
+  color: #929dbd;
+}
+
+.eyebrow > span {
+  background: #8bdcf0;
+  box-shadow: 0 0 12px #8bdcf080;
+}
+
+.pageDescription {
+  color: #9aa5c2;
+}
+
+.primaryButton {
+  border-color: #8873ed;
+  background: linear-gradient(110deg, #6653c9, #4a66c9);
+  box-shadow: 0 8px 24px #6653c92b;
+}
+
+.primaryButton:hover {
+  background: linear-gradient(110deg, #7763dc, #5876dc);
+}
+
+.primaryButton > span {
+  color: #a8eff2;
+}
+
+.overviewStrip {
+  border-color: #292f4b;
+  background: linear-gradient(110deg, #151b32d9, #11172acc);
+  box-shadow: inset 0 1px #ffffff08;
+  backdrop-filter: blur(14px);
+}
+
+.overviewIcon {
+  background: #202744;
+  color: #b5a6ff;
+}
+
+.syncIcon {
+  color: #8bdcf0;
+}
+
+.overviewItem strong > span,
+.overviewNote {
+  color: #9ba6c2;
+}
+
+.overviewDivider {
+  background: #303753;
+}
+
+.directoryCard {
+  border-color: #292f4b;
+  background: #101629eF;
+  box-shadow: 0 24px 80px #02040e80, 0 0 40px #7866d612;
+  backdrop-filter: blur(18px);
+}
+
+.directoryToolbar h2 {
+  color: #edf2ff;
+}
+
+.directoryToolbar p {
+  color: #929db8;
+}
+
+.searchBox {
+  border-color: #303752;
+  background: #0c1122;
+}
+
+.searchBox:focus-within {
+  border-color: #9c8cff;
+  box-shadow: 0 0 0 3px #9c8cff2b;
+}
+
+.searchIcon,
+.searchIcon::after {
+  border-color: #929db8;
+  background-color: #929db8;
+}
+
+.searchBox input {
+  color: #edf2ff;
+}
+
+.searchBox input::placeholder {
+  color: #717c9b;
+}
+
+.clearSearch {
+  color: #b1bad3;
+}
+
+.refreshButton {
+  border-color: #303752;
+  background: #171d34;
+  color: #c2c9e0;
+}
+
+.refreshButton:hover:not(:disabled) {
+  background: #222947;
+}
+
+.directoryAlert {
+  border-color: #714251;
+  background: #321d30;
+  color: #ffc0c9;
+}
+
+.directoryAlert button {
+  background: #563044;
+  color: #ffd9df;
+}
+
+.peopleTable thead {
+  background: #151b31;
+}
+
+.peopleTable th {
+  border-color: #292f49;
+  color: #8994b3;
+}
+
+.peopleTable td {
+  border-color: #252b43;
+  color: #adb7d0;
+}
+
+.peopleTable tbody tr:not(:has(.tableMessage)):hover {
+  background: #1a2039;
+}
+
+.personAvatar {
+  border-color: #554c83;
+  background: linear-gradient(145deg, #292746, #1d2c49);
+  color: #c0b4ff;
+}
+
+.personName {
+  color: #e5eaff;
+}
+
+.emailCell,
+.locationCell {
+  color: #a0abc7 !important;
+}
+
+.contactLink {
+  color: #9ee3ed;
+}
+
+.contactLink:hover {
+  color: #d2f8ff;
+}
+
+.tableMessage {
+  color: #929db8 !important;
+}
+
+.emptyTitle {
+  color: #e4e9fb;
+}
+
+.emptyDescription {
+  color: #929db8;
+}
+
+.emptyAction {
+  color: #b4a5ff;
+}
+
+.directoryFooter {
+  border-color: #252b43;
+  color: #8994b1;
+}
+
+.directoryFooter strong {
+  color: #dce3f8;
+}
+
+.liveIndicator {
+  color: #a2b3d0;
+}
+
+.liveIndicator > span {
+  background: #6ee7c2;
+  box-shadow: 0 0 10px #6ee7c280;
+}
+
+.pageFootnote {
+  color: #7f89a8;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .pageIntro {
+    align-items: flex-start;
+  }
+
+  .pageIntro h1 {
+    font-size: clamp(36px, 8vw, 50px);
+    letter-spacing: -1.8px;
+  }
+
+  .pageIntro > .primaryButton {
+    margin-top: 35px;
+  }
+
+  .overviewNote {
+    display: none;
+  }
+
+  .directoryToolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .directoryControls,
+  .searchBox {
+    width: 100%;
+  }
+
+  .refreshButton {
+    flex: 0 0 auto;
+  }
+
+  .peopleTable {
+    min-width: 650px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageIntro {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .pageIntro > .primaryButton {
+    margin-top: 0;
+  }
+
+  .overviewStrip {
+    gap: 12px;
+    padding: 16px 13px;
+  }
+
+  .overviewItem {
+    gap: 9px;
+  }
+
+  .overviewIcon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .overviewItem strong {
+    font-size: 16px;
+  }
+
+  .overviewLabel {
+    font-size: 8px;
+    letter-spacing: 0.7px;
+  }
+
+  .overviewDivider {
+    height: 36px;
+  }
+
+  .directoryToolbar {
+    padding: 20px 17px;
+  }
+
+  .peopleTable th,
+  .peopleTable td {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .directoryFooter {
+    padding: 0 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

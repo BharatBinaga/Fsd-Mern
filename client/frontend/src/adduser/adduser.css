@@ -1,0 +1,335 @@
+.addUserPage {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  animation: pageEnter 420ms ease both;
+}
+
+.backLink {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  padding: 0 13px;
+  border: 1px solid #e1e4da;
+  border-radius: 8px;
+  background: #fff;
+  color: #62685a;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 150ms ease, background 150ms ease, color 150ms ease;
+}
+
+.backLink:hover {
+  border-color: #cbd4b9;
+  background: #f7f8f3;
+  color: var(--ink);
+}
+
+.backLink span {
+  font-size: 17px;
+}
+
+.addUserCard {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  overflow: hidden;
+  border: 1px solid #e9eae5;
+  border-radius: var(--radius-card);
+  background: var(--paper);
+  box-shadow: 0 12px 38px #34392b08, 0 2px 6px #34392b05;
+}
+
+.formIntro {
+  position: relative;
+  overflow: hidden;
+  padding: 47px 34px;
+  background: #eeefe8;
+}
+
+.formAccent {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 44px;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #586b36;
+  font-size: 22px;
+}
+
+.formIntro .eyebrow {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 18px;
+  font-size: 9px;
+  letter-spacing: 1.25px;
+}
+
+.formIntro h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 400;
+  letter-spacing: -1.8px;
+  line-height: 1.1;
+}
+
+.formIntro h1 em {
+  color: #858c7a;
+  font-weight: 400;
+}
+
+.formDescription {
+  position: relative;
+  z-index: 1;
+  max-width: 235px;
+  margin: 17px 0 0;
+  color: #72786a;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.formIntro::after {
+  position: absolute;
+  right: -62px;
+  bottom: -94px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid #dfe3d3;
+  border-radius: 50%;
+  box-shadow: 0 0 0 22px #ffffff18, 0 0 0 46px #ffffff18;
+  content: "";
+}
+
+.addUserForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 19px;
+  padding: 42px 38px;
+}
+
+.formField {
+  display: grid;
+  gap: 8px;
+}
+
+.formField label {
+  color: #42473e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.formField label span {
+  color: #9bab79;
+}
+
+.formField input {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #e6e8e0;
+  border-radius: 8px;
+  background: #fcfcfa;
+  color: var(--ink);
+  font-size: 12px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.formField input::placeholder {
+  color: #a2a59c;
+}
+
+.formField input:focus {
+  border-color: #a9bd84;
+  outline: none;
+  box-shadow: 0 0 0 3px #a9bd8426;
+}
+
+.addUserError {
+  margin: -4px 0 0;
+  color: #a34337;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.addUserActions {
+  display: grid;
+  gap: 11px;
+  margin-top: 4px;
+}
+
+.addUserActions button {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border: 1px solid var(--accent-dark);
+  border-radius: 8px;
+  background: var(--accent-dark);
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.addUserActions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #394b27;
+}
+
+.addUserActions button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.addUserActions button span {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.addUserActions p {
+  margin: 0;
+  color: #9a9d94;
+  font-size: 10px;
+  text-align: center;
+}
+
+.addUserFootnote {
+  margin: 22px 0 0;
+  color: #a0a399;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.backLink {
+  border-color: var(--line);
+  background: #11172acc;
+  color: #b6bfd8;
+}
+
+.backLink:hover {
+  border-color: #7866d6;
+  background: #171d35;
+  color: var(--ink);
+}
+
+.addUserCard {
+  border-color: #292f4b;
+  background: #101629eF;
+  box-shadow: 0 24px 80px #02040e80, 0 0 40px #7866d612;
+  backdrop-filter: blur(18px);
+}
+
+.formIntro {
+  background:
+    radial-gradient(circle at 22% 12%, #8e7be52b, transparent 12rem),
+    linear-gradient(150deg, #171c37, #11172b 72%);
+}
+
+.formAccent {
+  background: linear-gradient(145deg, #bba8ff, #78d6e8);
+  color: #18152e;
+  box-shadow: 0 0 28px #a28cff35;
+}
+
+.formIntro .eyebrow {
+  color: #a4acd0;
+}
+
+.formIntro h1 em {
+  color: #a998ee;
+}
+
+.formDescription {
+  color: #a0aac7;
+}
+
+.formIntro::after {
+  border-color: #9c8cff26;
+  box-shadow: 0 0 0 22px #ffffff08, 0 0 0 46px #ffffff06;
+}
+
+.formField label {
+  color: #d7def3;
+}
+
+.formField label span {
+  color: #8edcf0;
+}
+
+.formField input {
+  border-color: #303752;
+  background: #0c1122;
+  color: var(--ink);
+}
+
+.formField input::placeholder {
+  color: #717c9b;
+}
+
+.formField input:focus {
+  border-color: #9c8cff;
+  box-shadow: 0 0 0 3px #9c8cff2b;
+}
+
+.addUserError {
+  color: #ff9aab;
+}
+
+.addUserActions button {
+  border-color: #8873ed;
+  background: linear-gradient(110deg, #6653c9, #4a66c9);
+  color: #fff;
+  box-shadow: 0 8px 24px #6653c933;
+}
+
+.addUserActions button:hover:not(:disabled) {
+  background: linear-gradient(110deg, #7763dc, #5876dc);
+}
+
+.addUserActions button span {
+  color: #a8eff2;
+}
+
+.addUserActions p,
+.addUserFootnote {
+  color: #7f89a8;
+}
+
+@media (max-width: 650px) {
+  .addUserCard {
+    grid-template-columns: 1fr;
+  }
+
+  .formIntro {
+    padding: 28px 25px 30px;
+  }
+
+  .formAccent {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 22px;
+  }
+
+  .formIntro h1 {
+    font-size: 38px;
+  }
+
+  .formDescription {
+    max-width: 310px;
+  }
+
+  .addUserForm {
+    padding: 28px 25px 30px;
+  }
+}

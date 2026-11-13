@@ -1,0 +1,82 @@
+:root {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: #edf2ff;
+  background: #080b18;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --ink: #edf2ff;
+  --muted: #929bb7;
+  --line: #252b45;
+  --paper: #11172a;
+  --canvas: #080b18;
+  --accent: #a78bfa;
+  --accent-dark: #6552c8;
+  --radius-card: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 12% 8%, #382b7640 0, transparent 34rem),
+    radial-gradient(ellipse at 92% 38%, #173d6540 0, transparent 32rem),
+    linear-gradient(145deg, #080b18 0%, #0c1022 52%, #090d1b 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 8% 18%, #d7ddff99 50%, transparent 100%),
+    radial-gradient(1px 1px at 21% 73%, #b8c5ff80 50%, transparent 100%),
+    radial-gradient(1px 1px at 34% 41%, #ffffff80 50%, transparent 100%),
+    radial-gradient(1px 1px at 48% 12%, #d9c9ff80 50%, transparent 100%),
+    radial-gradient(1px 1px at 63% 82%, #ffffff70 50%, transparent 100%),
+    radial-gradient(1px 1px at 77% 29%, #c1d5ff90 50%, transparent 100%),
+    radial-gradient(1px 1px at 91% 66%, #ddd2ff80 50%, transparent 100%);
+  background-size: 390px 320px;
+  content: "";
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #a78bfa;
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--ink);
+  background: var(--accent);
+}
+
+button,
+input {
+  color-scheme: dark;
+}

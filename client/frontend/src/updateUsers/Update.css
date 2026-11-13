@@ -1,0 +1,256 @@
+.updatePage {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  animation: pageEnter 420ms ease both;
+}
+
+.updatePage .backLink {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  padding: 0 13px;
+  border: 1px solid #e1e4da;
+  border-radius: 8px;
+  background: #fff;
+  color: #62685a;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 150ms ease, background 150ms ease, color 150ms ease;
+}
+
+.updatePage .backLink:hover {
+  border-color: #cbd4b9;
+  background: #f7f8f3;
+  color: var(--ink);
+}
+
+.updatePage .backLink span {
+  font-size: 17px;
+}
+
+.updateCard {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  overflow: hidden;
+  border: 1px solid #e9eae5;
+  border-radius: var(--radius-card);
+  background: var(--paper);
+  box-shadow: 0 12px 38px #34392b08, 0 2px 6px #34392b05;
+}
+
+.updatePage .formIntro {
+  position: relative;
+  overflow: hidden;
+  padding: 47px 34px;
+  background: #eeefe8;
+}
+
+.updatePage .formAccent {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 44px;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #586b36;
+  font-size: 22px;
+}
+
+.updatePage .eyebrow {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 18px;
+  color: #59634a;
+  font-size: 9px;
+  letter-spacing: 1.25px;
+}
+
+.updatePage .formIntro h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #252b3e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 400;
+  letter-spacing: -1.8px;
+  line-height: 1.1;
+}
+
+.updatePage .formIntro h1 em {
+  color: #5d6651;
+  font-weight: 400;
+}
+
+.updatePage .formDescription {
+  position: relative;
+  z-index: 1;
+  max-width: 235px;
+  margin: 17px 0 0;
+  color: #72786a;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.updatePage .formIntro::after {
+  position: absolute;
+  right: -62px;
+  bottom: -94px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid #dfe3d3;
+  border-radius: 50%;
+  box-shadow: 0 0 0 22px #ffffff18, 0 0 0 46px #ffffff18;
+  content: "";
+}
+
+.updateForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 19px;
+  padding: 42px 38px;
+}
+
+.updatePage .formField {
+  display: grid;
+  gap: 8px;
+}
+
+.updatePage .formField label {
+  color: #d7def3;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.updatePage .formField label span {
+  color: #8edcf0;
+}
+
+.updatePage .formField input {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #e6e8e0;
+  border-radius: 8px;
+  background: #fcfcfa;
+  color: #252b3e;
+  font-size: 12px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.updatePage .formField input::placeholder {
+  color: #72776d;
+}
+
+.updatePage .formField input:focus {
+  border-color: #9c8cff;
+  outline: none;
+  box-shadow: 0 0 0 3px #9c8cff2b;
+}
+
+.updateError {
+  margin: -4px 0 0;
+  color: #ff9aab;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.updateActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.updateActions button,
+.cancelLink {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  border: 1px solid var(--accent-dark);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.updateActions button {
+  border-color: var(--accent-dark);
+  background: var(--accent-dark);
+  color: #fff;
+  cursor: pointer;
+}
+
+.updateActions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #394b27;
+}
+
+.updateActions button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.updateActions button span {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.cancelLink {
+  border-color: #d7d9d2;
+  background: #f5f6f2;
+  color: #555d4f;
+}
+
+.updateFootnote {
+  margin: 22px 0 0;
+  color: #a0a399;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.loadingCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  padding: 32px;
+}
+
+.loadingCard h1 {
+  margin: 0;
+  color: #edf2ff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 400;
+}
+
+@media (max-width: 720px) {
+  .updateCard {
+    grid-template-columns: 1fr;
+  }
+
+  .updateForm {
+    padding: 28px 20px 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
